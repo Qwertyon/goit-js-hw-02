@@ -8,7 +8,12 @@ while (true) {
     break;
   }
   input = Number(input);
-  numbers.push(input);
+  if (Number.isNaN(input) === false) {
+    console.log(Number.isNaN(input));
+    numbers.push(input);
+  } else {
+    alert("Было введено не число, попробуйте еще раз");
+  }
 }
 
 for (let i = 0; i < numbers.length; i += 1) {
